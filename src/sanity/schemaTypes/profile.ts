@@ -1,4 +1,3 @@
-
 import { defineField } from "sanity";
 import { BiUser } from "react-icons/bi";
 
@@ -106,5 +105,5 @@ export const profile = {
       description: "Add a list of skills",
       of: [{ type: "string" }],
     },
- ],
+  ],
 };
