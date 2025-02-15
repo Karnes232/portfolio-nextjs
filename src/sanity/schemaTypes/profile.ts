@@ -91,7 +91,60 @@ export const profile = {
       title: "Skills",
       type: "array",
       description: "Add a list of skills",
-      of: [{ type: "string" }],
+      of: [
+        {
+          type: "object",
+          title: "Skill",
+          fields: [
+            {
+              name: "skillName",
+              type: "string",
+              title: "Skill Name",
+            },
+            {
+              name: "image",
+              type: "image",
+              title: "Skill Image",
+              options: { hotspot: true },
+              fields: [
+                {
+                  name: "alt",
+                  title: "Alt",
+                  type: "string",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      // fields: [
+      //   {
+      //     name: "Skill",
+      //     title: "Skill",
+      //     type: "string",
+      //     initialValue: "",
+      //   },
+      //   {
+      //     name: "Image",
+      //     title: "Image",
+      //     type: "image",
+      //     description: "Upload a image",
+      //     options: { hotspot: true },
+      //     fields: [
+      //       {
+      //         name: "alt",
+      //         title: "Alt",
+      //         type: "string",
+      //       },
+      //     ],
+      //   },
+      // ],
+      options: {
+        collapsed: false,
+        collapsible: true,
+        columns: 1,
+      },
+      // of: [{ type: "string" }],
     },
   ],
 };
