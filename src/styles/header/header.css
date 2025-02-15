@@ -1,0 +1,7 @@
+.navLinks {
+  @apply text-white text-sm md:text-lg inline-flex cursor-pointer hover:scale-105 transition-all duration-150 ease-out;
+}
+html {
+  overflow-y: scroll !important;
+  padding-right: 0 !important;
+}

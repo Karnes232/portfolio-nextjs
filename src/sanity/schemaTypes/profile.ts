@@ -1,5 +1,5 @@
-import { defineField } from "sanity";
-import { BiUser } from "react-icons/bi";
+import { defineField } from "sanity"
+import { BiUser } from "react-icons/bi"
 
 export const profile = {
   name: "profile",
@@ -11,14 +11,14 @@ export const profile = {
       name: "fullName",
       title: "Full Name",
       type: "string",
-      validation: (rule) => rule.required(),
+      validation: rule => rule.required(),
     }),
     defineField({
       name: "headline",
       title: "Headline",
       type: "string",
       description: "In one short sentence, what do you do?",
-      validation: (Rule) => Rule.required().min(40).max(50),
+      validation: Rule => Rule.required().min(40).max(50),
     }),
     {
       name: "profileImage",
@@ -147,4 +147,4 @@ export const profile = {
       // of: [{ type: "string" }],
     },
   ],
-};
+}

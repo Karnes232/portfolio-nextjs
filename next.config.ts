@@ -6,7 +6,7 @@ const nextConfig = {
         source: "/:path*",
         headers: [{ key: "Access-Control-Allow-Origin", value: "*" }],
       },
-    ];
+    ]
   },
   reactStrictMode: true,
   images: {
@@ -21,6 +21,6 @@ const nextConfig = {
       },
     ],
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
