@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import { SanityDocument } from "next-sanity"
 import { client } from "@/sanity/lib/client"
-const ProfileImage = `*[_type == "profile"]{ _id, fullName, profileImage{asset->}}`
+const ProfileImage = `*[_type == "profile"]{ _id, fullName, logoImage{asset->}}`
 const options = { next: { revalidate: 30 } }
 const Logo = async () => {
   const profiles = await client.fetch<SanityDocument[]>(
@@ -10,12 +10,12 @@ const Logo = async () => {
     {},
     options,
   )
-  console.log(profiles[0].profileImage.asset.metadata.dimensions)
+  console.log(profiles[0])
   return (
     <div className="flex justify-center items-center">
       <div className="flex p-2 md:p-6 items-center w-24 h-20 cursor-pointer md:w-56 md:h-40">
         <Image
-          src={profiles[0].profileImage.asset.url}
+          src={profiles[0].logoImage.asset.url}
           alt="Logo"
           width={224}
           height={224}

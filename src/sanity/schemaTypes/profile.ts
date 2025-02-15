@@ -21,6 +21,20 @@ export const profile = {
       validation: Rule => Rule.required().min(40).max(50),
     }),
     {
+      name: "logoImage",
+      title: "Logo Image",
+      type: "image",
+      description: "Upload a Logo",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    },
+    {
       name: "profileImage",
       title: "Profile Image",
       type: "image",
@@ -117,34 +131,11 @@ export const profile = {
           ],
         },
       ],
-      // fields: [
-      //   {
-      //     name: "Skill",
-      //     title: "Skill",
-      //     type: "string",
-      //     initialValue: "",
-      //   },
-      //   {
-      //     name: "Image",
-      //     title: "Image",
-      //     type: "image",
-      //     description: "Upload a image",
-      //     options: { hotspot: true },
-      //     fields: [
-      //       {
-      //         name: "alt",
-      //         title: "Alt",
-      //         type: "string",
-      //       },
-      //     ],
-      //   },
-      // ],
       options: {
         collapsed: false,
         collapsible: true,
         columns: 1,
       },
-      // of: [{ type: "string" }],
     },
   ],
 }
